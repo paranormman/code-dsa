@@ -1,25 +1,34 @@
-package DSA;
+// package DSA;
 
 public class reverse_linked_list {
+    
     private ListNode head;
-    private static class ListNode{
+    public class ListNode{
         private int data;
         private ListNode next;
-        
-        public ListNode(int data){
-        this.data = data;
-        this.next = null;
+
+        private ListNode(int data){
+            this.data = data;
+            this.next = null;
         }
     }
 
-    public void displayNew(){
-
+    public void displayAll(){
+        if(head == null){
+            System.out.println("null");
+        }
         ListNode current = head;
-        while(current != head){
-            System.out.println(current.data + " --> ");
+        while(current != null){
+            System.out.print(current.data + " --> ");
             current = current.next;
         }
-        System.out.println("null");
+        System.out.print("null");
+    }
+
+    public void insertInTheStart(int value){
+        ListNode newNode = new ListNode(value);
+        newNode.next = head;
+        head = newNode;
     }
 
     public ListNode reverseLinkedList(ListNode head){
@@ -42,19 +51,16 @@ public class reverse_linked_list {
 
 
     public static void main(String[] args) {
-        reverse_linked_list reverse = new reverse_linked_list();
-        reverse.head = new ListNode(10);
-        ListNode second = new ListNode(8);
-        ListNode third = new ListNode(1);
-        ListNode fourth = new ListNode(11);
-        
-        reverse.head.next = second;
-        second.next = third;
-        third.next = fourth;
+        reverse_linked_list rll = new reverse_linked_list();
 
-        
-        reverse.displayNew();
-        // ListNode reverseHead = reverse.reverseLinkedList(head);
-        // reverse.displayNew(reverseHead);
+        rll.insertInTheStart(10);
+        rll.insertInTheStart(1);
+        rll.insertInTheStart(12);
+        rll.insertInTheStart(8);
+
+        rll.displayAll();
+
+        rll.reverseLinkedList(fourth);
+
     }
 }

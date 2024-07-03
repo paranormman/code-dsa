@@ -133,6 +133,7 @@ public class singly_linked_list {
         return false;
     }
 
+    // Algo to reverse the Linked List
     public ListNode reverseLinkedList(ListNode head){
         if(head == null){
             return head;
@@ -147,6 +148,19 @@ public class singly_linked_list {
             current = next; 
         }
         return previous;
+    }
+
+    // ALgo to find the middle node in a linked List.
+    // if there are even number of Linked Lists
+
+    public ListNode middleNode(){
+        ListNode slowptr = head;
+        ListNode fastptr = head;
+        while(fastptr != null && fastptr.next != null){
+            slowptr = slowptr.next;
+            fastptr = fastptr.next.next;
+        }
+        return slowptr;
     }
 
 
