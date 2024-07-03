@@ -2,7 +2,7 @@
 
 public class reverse_linked_list {
     
-    private ListNode head;
+    private static ListNode head;
     public class ListNode{
         private int data;
         private ListNode next;
@@ -13,7 +13,7 @@ public class reverse_linked_list {
         }
     }
 
-    public void displayAll(){
+    public void displayAll(ListNode head){
         if(head == null){
             System.out.println("null");
         }
@@ -58,9 +58,13 @@ public class reverse_linked_list {
         rll.insertInTheStart(12);
         rll.insertInTheStart(8);
 
-        rll.displayAll();
+        rll.displayAll(head);
 
-        rll.reverseLinkedList(fourth);
+        System.out.println();
+
+        ListNode reverseNode = rll.reverseLinkedList(head);
+        rll.displayAll(reverseNode);
+        // rll.reverseLinkedList(fourth);
 
     }
 }
