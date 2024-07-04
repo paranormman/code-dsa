@@ -66,6 +66,10 @@ public class find_n_node_LL {
         nll.displayList();
         System.out.println();
 
-        System.out.println("The last second node in the Linked List is - " + nll.getNthNodeFromEnd(3).data);
+        ListNode nthNodeFromEnd = nll.getNthNodeFromEnd(2);
+
+        // System.out.println("The last second node in the Linked List is - " + nll.getNthNodeFromEnd(3).data);
+        
+        System.out.println("The last second node in the Linked List is - " + nthNodeFromEnd.data);
     }
 }
