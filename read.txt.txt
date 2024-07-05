@@ -1,3 +1,0 @@
-This is a daily tracker for learning DSA.
-The topics are daily updated.
-adding a new git topic
