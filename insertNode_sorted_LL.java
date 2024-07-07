@@ -29,7 +29,7 @@ public class insertNode_sorted_LL {
         head = newNode;
     }
 
-    public ListNode insertNewNodeInSortedLL(int value){
+    public void insertNewNodeInSortedLL(int value){
         ListNode newListNode = new ListNode(value);
         ListNode current = head;
         ListNode temp = null;
@@ -41,7 +41,7 @@ public class insertNode_sorted_LL {
 
         newListNode.next = current;
         temp.next = newListNode;
-        return head;
+
     }
 
     public static void main(String[] args) {
