@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 public class find_Startloop_LL {
     
+=======
+import javax.swing.text.html.StyleSheet.ListPainter;
+
+public class find_StartLoop_LL {
+
+>>>>>>> e10e8cbaee720e3b8c47b88292f0dceaf5630752
     private ListNode head;
 
     private class ListNode {
@@ -25,7 +32,11 @@ public class find_Startloop_LL {
         System.out.print("null");
     }
 
+<<<<<<< HEAD
     public boolean detectLoopInALinkedList() {
+=======
+    public ListNode detectLoopInALinkedList() {
+>>>>>>> e10e8cbaee720e3b8c47b88292f0dceaf5630752
         ListNode fastPtr = head;
         ListNode slowPtr = head;
         
@@ -33,11 +44,28 @@ public class find_Startloop_LL {
             fastPtr = fastPtr.next.next;
             slowPtr = slowPtr.next;
             if(fastPtr == slowPtr) {
+<<<<<<< HEAD
                 // return getStartingNode(slowPtr);
                 return true;
             }
         }
         return false;
+=======
+                return getStartingNode(slowPtr);
+                // return true;
+            }
+        }
+        return null;
+    }
+
+    private ListNode getStartingNode(ListNode slowPtr) {
+        ListNode temp = head;
+        while(temp != slowPtr) {
+            temp = temp.next;
+            slowPtr = slowPtr.next;
+        }
+        return temp;
+>>>>>>> e10e8cbaee720e3b8c47b88292f0dceaf5630752
     }
 
 
@@ -60,6 +88,7 @@ public class find_Startloop_LL {
 
     }
 
+<<<<<<< HEAD
 
     public static void main(String[] args) {
 
@@ -67,6 +96,13 @@ public class find_Startloop_LL {
 
         start.createALoopInLinkedList();
         System.out.println(start.detectLoopInALinkedList());
+=======
+    public static void main(String[] args) {
+     
+        find_StartLoop_LL start = new find_StartLoop_LL();
+        start.createALoopInLinkedList();
+        System.out.println(start.detectLoopInALinkedList().data);
+>>>>>>> e10e8cbaee720e3b8c47b88292f0dceaf5630752
         
     }
 }

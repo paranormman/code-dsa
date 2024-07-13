@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 // import java.util.List;
 
+=======
+>>>>>>> e10e8cbaee720e3b8c47b88292f0dceaf5630752
 public class find_n_node_LL {
     
     public ListNode head;
@@ -72,4 +75,8 @@ public class find_n_node_LL {
         
         System.out.println("The last second node in the Linked List is - " + nthNodeFromEnd.data);
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> e10e8cbaee720e3b8c47b88292f0dceaf5630752
