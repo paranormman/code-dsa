@@ -1,6 +1,6 @@
 import javax.swing.text.html.StyleSheet.ListPainter;
 
-public class find_StartLoop_LL {
+public class find_Startloop_LL {
 
     private ListNode head;
 
@@ -73,7 +73,7 @@ public class find_StartLoop_LL {
 
     public static void main(String[] args) {
      
-        find_StartLoop_LL start = new find_StartLoop_LL();
+        find_Startloop_LL start = new find_Startloop_LL();
         start.createALoopInLinkedList();
         System.out.println(start.detectLoopInALinkedList().data);
         
